@@ -1,7 +1,10 @@
 {
-  "name": "nextjs-app-router-with-firebase-auth",
+  "name": "simply-books",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Sirena Foster"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
