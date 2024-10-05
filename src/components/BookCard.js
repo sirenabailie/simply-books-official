@@ -24,7 +24,7 @@ function BookCard({ bookObj, onUpdate }) {
         <p className="card-text bold">
           {bookObj.sale && (
             <span>
-              SALE
+              🏷️
               <br />
             </span>
           )}{' '}

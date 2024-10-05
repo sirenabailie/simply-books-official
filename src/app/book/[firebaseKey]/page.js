@@ -1,16 +1,18 @@
 'use client';
 
+/* eslint-disable @next/next/no-img-element */
 import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 import { viewBookDetails } from '@/api/mergedData';
-import PropTypes from 'prop-types';
 
-export default function ViewBook({ params }) {
+export default function ViewBook() {
   const [bookDetails, setBookDetails] = useState({});
+  const router = useRouter();
 
-  // grab firebaseKey from url
-  const { firebaseKey } = params;
+  // TODO: grab firebaseKey from url
+  const { firebaseKey } = router.query;
 
-  // make call to API layer to get the data
+  // TODO: make call to API layer to get the data
   useEffect(() => {
     viewBookDetails(firebaseKey).then(setBookDetails);
   }, [firebaseKey]);
@@ -33,7 +35,3 @@ export default function ViewBook({ params }) {
     </div>
   );
 }
-
-ViewBook.propTypes = {
-  params: PropTypes.objectOf({}).isRequired,
-};

@@ -96,7 +96,7 @@ function BookForm({ obj = initialState }) {
         type="switch"
         id="sale"
         name="sale"
-        label="On Sale?"
+        label="🏷️ On Sale?"
         checked={formInput.sale}
         onChange={(e) => {
           setFormInput((prevState) => ({
