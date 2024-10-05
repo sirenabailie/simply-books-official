@@ -29,7 +29,10 @@ export default function ViewAuthor({ params }) {
         {authorDetails.books && authorDetails.books.length > 0 ? (
           <ul>
             {authorDetails.books.map((book) => (
-              <li key={book.firebaseKey}>{book.title}</li>
+              <li key={book.firebaseKey} className="d-flex align-items-center mb-3">
+                <img src={book.image} alt={book.title} style={{ width: '50px', height: '75px', objectFit: 'cover', marginRight: '10px' }} />
+                <span>{book.title}</span>
+              </li>
             ))}
           </ul>
         ) : (
