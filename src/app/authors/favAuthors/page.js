@@ -19,7 +19,7 @@ export default function FavoriteAuthors() {
 
   return (
     <>
-      <div className="text-center justify-content-center">
+      <div className="text-center justify-content-center fav">
         <h4 style={{ margin: '20px 0' }}>Favorites 💖</h4>
       </div>
       <div className="d-flex flex-wrap justify-content-center">

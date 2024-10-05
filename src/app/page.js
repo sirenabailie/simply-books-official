@@ -29,7 +29,7 @@ function Home() {
   return (
     <div className="text-center my-4">
       <Link href="/book/new" passHref>
-        <Button variant="dark" className="mb-3">
+        <Button variant="dark" className="mb-3 btn">
           Add Book
         </Button>
       </Link>
