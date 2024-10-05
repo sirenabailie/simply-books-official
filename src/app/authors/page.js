@@ -29,9 +29,11 @@ function Home() {
   return (
     <div className="text-center my-4">
       <Link href="/authors/new" passHref>
-        <Button>Add Author</Button>
+        <Button variant="dark" className="mb-3">
+          Add Author
+        </Button>
       </Link>
-      <div className="d-flex flex-wrap">
+      <div className="d-flex flex-wrap justify-content-center">
         {/* TODO: map over books here using BookCard component */}
         {authors.map((author) => (
           <AuthorCard key={author.firebaseKey} authorObj={author} onUpdate={getAllTheAuthors} />

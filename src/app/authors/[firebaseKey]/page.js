@@ -18,14 +18,14 @@ export default function ViewAuthor({ params }) {
   }, [firebaseKey]);
 
   return (
-    <div className="mt-5 d-flex flex-wrap">
+    <div className="mt-5 d-flex flex-wrap justify-content-center">
       <div className="text-white ms-5 details">
-        <h5>
+        <h5 className="mb-3">
           {authorDetails.first_name} {authorDetails.last_name}
           {authorDetails.favorite ? ' 🤍' : ''}
         </h5>
-        Email: {authorDetails.email}
-        <h6>Books:</h6>
+        <h6 className="mb-3">Email: {authorDetails.email}</h6>
+        <h6 className="mb-3">Books:</h6>
         {authorDetails.books && authorDetails.books.length > 0 ? (
           <ul>
             {authorDetails.books.map((book) => (
