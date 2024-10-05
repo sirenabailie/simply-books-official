@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPenToSquare , faTrashCan } from '@fortawesome/free-regular-svg-icons';
+import { faPenToSquare, faTrashCan } from '@fortawesome/free-regular-svg-icons';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
@@ -16,7 +16,7 @@ function AuthorCard({ authorObj, onUpdate }) {
   };
 
   return (
-    <Card style={{ width: '18rem', margin: '10px' }} className="text-center">
+    <Card style={{ width: '18rem', margin: '10px' }} className="text-center card">
       {' '}
       {/* Center all text inside the card */}
       <Card.Body>
