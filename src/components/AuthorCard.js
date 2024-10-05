@@ -19,16 +19,14 @@ function AuthorCard({ authorObj, onUpdate }) {
       <Card.Body>
         <Card.Title>
           {authorObj.first_name} {authorObj.last_name}
-        </Card.Title>
-        <p className="card-text bold">
           {authorObj.favorite && (
             <span>
               ❤️
               <br />
             </span>
           )}{' '}
-          @{authorObj.email}
-        </p>
+        </Card.Title>
+        <p className="card-text bold">@{authorObj.email}</p>
         {/* DYNAMIC LINK TO VIEW THE AUTHOR DETAILS  */}
         <Link href={`/authors/${authorObj.firebaseKey}`} passHref>
           <Button variant="primary" className="m-2">
@@ -37,7 +35,7 @@ function AuthorCard({ authorObj, onUpdate }) {
         </Link>
         {/* DYNAMIC LINK TO EDIT THE AUTHOR DETAILS  */}
         <Link href={`/authors/edit/${authorObj.firebaseKey}`} passHref>
-          <Button variant="info">EDIT</Button>
+          <Button variant="success">EDIT</Button>
         </Link>
         <Button variant="danger" onClick={deleteThisAuthor} className="m-2">
           DELETE

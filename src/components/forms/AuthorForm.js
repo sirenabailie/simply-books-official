@@ -95,7 +95,7 @@ function AuthorForm({ obj = initialState }) {
         type="switch"
         id="favorite"
         name="favorite"
-        label="Favorite?"
+        label="Favorite? 💖"
         checked={formInput.favorite || false} // Ensure controlled checkbox with fallback
         onChange={(e) => {
           setFormInput((prevState) => ({
