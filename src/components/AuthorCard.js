@@ -1,6 +1,7 @@
-'use client';
-
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPenToSquare , faTrashCan } from '@fortawesome/free-regular-svg-icons';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -15,7 +16,9 @@ function AuthorCard({ authorObj, onUpdate }) {
   };
 
   return (
-    <Card style={{ width: '18rem', margin: '10px' }}>
+    <Card style={{ width: '18rem', margin: '10px' }} className="text-center">
+      {' '}
+      {/* Center all text inside the card */}
       <Card.Body>
         <Card.Title>
           {authorObj.first_name} {authorObj.last_name}
@@ -24,22 +27,27 @@ function AuthorCard({ authorObj, onUpdate }) {
               ❤️
               <br />
             </span>
-          )}{' '}
+          )}
         </Card.Title>
         <p className="card-text bold">@{authorObj.email}</p>
-        {/* DYNAMIC LINK TO VIEW THE AUTHOR DETAILS  */}
-        <Link href={`/authors/${authorObj.firebaseKey}`} passHref>
-          <Button variant="primary" className="m-2">
-            VIEW
+        {/* Center the buttons */}
+        <div className="d-flex justify-content-center">
+          {/* DYNAMIC LINK TO VIEW THE AUTHOR DETAILS */}
+          <Link href={`/authors/${authorObj.firebaseKey}`} passHref>
+            <Button variant="primary" className="m-2">
+              <FontAwesomeIcon icon={faMagnifyingGlass} />
+            </Button>
+          </Link>
+          {/* DYNAMIC LINK TO EDIT THE AUTHOR DETAILS */}
+          <Link href={`/authors/edit/${authorObj.firebaseKey}`} passHref>
+            <Button variant="success" className="m-2">
+              <FontAwesomeIcon icon={faPenToSquare} />
+            </Button>
+          </Link>
+          <Button variant="danger" onClick={deleteThisAuthor} className="m-2">
+            <FontAwesomeIcon icon={faTrashCan} />
           </Button>
-        </Link>
-        {/* DYNAMIC LINK TO EDIT THE AUTHOR DETAILS  */}
-        <Link href={`/authors/edit/${authorObj.firebaseKey}`} passHref>
-          <Button variant="success">EDIT</Button>
-        </Link>
-        <Button variant="danger" onClick={deleteThisAuthor} className="m-2">
-          DELETE
-        </Button>
+        </div>
       </Card.Body>
     </Card>
   );
