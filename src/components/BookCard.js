@@ -40,13 +40,13 @@ function BookCard({ bookObj, onUpdate }) {
         <h6>${bookObj.price}</h6>
         {/* DYNAMIC LINK TO VIEW THE BOOK DETAILS  */}
         <Link href={`/book/${bookObj.firebaseKey}`} passHref>
-          <Button variant="primary" className="m-2">
+          <Button variant="dark" className="m-2">
             <FontAwesomeIcon icon={faMagnifyingGlass} />
           </Button>
         </Link>
         {/* DYNAMIC LINK TO EDIT THE BOOK DETAILS  */}
         <Link href={`/book/edit/${bookObj.firebaseKey}`} passHref>
-          <Button variant="success">
+          <Button variant="dark">
             <FontAwesomeIcon icon={faPenToSquare} />
           </Button>
         </Link>

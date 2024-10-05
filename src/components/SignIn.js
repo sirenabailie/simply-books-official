@@ -15,7 +15,7 @@ function Signin() {
     >
       <h1>Hi there!</h1>
       <p>Click the button below to login!</p>
-      <Button type="button" size="lg" className="copy-btn" onClick={signIn}>
+      <Button variant="dark" type="button" size="lg" className="copy-btn signInBtn" onClick={signIn}>
         Sign In
       </Button>
     </div>

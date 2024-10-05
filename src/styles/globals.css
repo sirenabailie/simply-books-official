@@ -22,6 +22,14 @@ border-radius: 10px;
 border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
+.btn:hover {
+  background-color: rgba(121, 10, 10, 0.37);
+}
+
+.signInBtn:hover {
+  background-color: rgba(121, 10, 10, 0.37);
+}
+
 .fav {
   color: white;
 }
