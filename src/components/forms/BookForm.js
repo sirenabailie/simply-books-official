@@ -107,7 +107,9 @@ function BookForm({ obj = initialState }) {
       />
 
       {/* SUBMIT BUTTON  */}
-      <Button type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Book</Button>
+      <Button variant="dark" type="submit">
+        {obj.firebaseKey ? 'Update' : 'Create'} Book
+      </Button>
     </Form>
   );
 }

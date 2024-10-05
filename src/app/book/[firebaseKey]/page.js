@@ -27,7 +27,10 @@ export default function ViewBook({ params }) {
           {bookDetails.title} by {bookDetails.authorObject?.first_name} {bookDetails.authorObject?.last_name}
           {bookDetails.authorObject?.favorite ? ' 🤍' : ''}
         </h5>
-        Author Email: <a href={`mailto:${bookDetails.authorObject?.email}`}>{bookDetails.authorObject?.email}</a>
+        Author Email:{' '}
+        <a href={`mailto:${bookDetails.authorObject?.email}`} style={{ color: 'indianred' }}>
+          {bookDetails.authorObject?.email}
+        </a>
         <p>{bookDetails.description || ''}</p>
         <hr />
         <p>{bookDetails.sale ? `🏷️ Sale $${bookDetails.price}` : `$${bookDetails.price}`}</p>

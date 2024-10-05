@@ -13,7 +13,12 @@ body {
 }
 
 .navbar-brand, .nav-link {
-  color: white !important; /* Override Bootstrap's default link colors */
+  color: white !important; 
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: indianred !important; /* Change text color to IndianRed on hover */
 }
 
 .card {
