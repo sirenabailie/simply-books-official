@@ -34,17 +34,17 @@ function AuthorCard({ authorObj, onUpdate }) {
         <div className="d-flex justify-content-center">
           {/* DYNAMIC LINK TO VIEW THE AUTHOR DETAILS */}
           <Link href={`/authors/${authorObj.firebaseKey}`} passHref>
-            <Button variant="dark" className="m-2">
+            <Button variant="dark" className="m-2" title="View Details">
               <FontAwesomeIcon icon={faMagnifyingGlass} />
             </Button>
           </Link>
           {/* DYNAMIC LINK TO EDIT THE AUTHOR DETAILS */}
           <Link href={`/authors/edit/${authorObj.firebaseKey}`} passHref>
-            <Button variant="dark" className="m-2">
+            <Button variant="dark" className="m-2" title="Edit Author">
               <FontAwesomeIcon icon={faPenToSquare} />
             </Button>
           </Link>
-          <Button variant="danger" onClick={deleteThisAuthor} className="m-2">
+          <Button variant="danger" onClick={deleteThisAuthor} className="m-2" title="Delete Author">
             <FontAwesomeIcon icon={faTrashCan} />
           </Button>
         </div>
