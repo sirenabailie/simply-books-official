@@ -2,7 +2,9 @@
 import React from 'react';
 import Link from 'next/link';
 import { Navbar, Container, Nav, Button } from 'react-bootstrap';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
 import { signOut } from '../utils/auth';
 

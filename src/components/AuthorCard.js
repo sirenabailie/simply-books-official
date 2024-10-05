@@ -1,6 +1,9 @@
 import React from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPenToSquare , faTrashCan } from '@fortawesome/free-regular-svg-icons';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { faPenToSquare, faTrashCan } from '@fortawesome/free-regular-svg-icons';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
