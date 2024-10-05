@@ -1,6 +1,14 @@
 'use client';
 
 import React from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-duplicates
+import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+// eslint-disable-next-line import/no-extraneous-dependencies, import/no-duplicates
+import { faTrashCan } from '@fortawesome/free-regular-svg-icons';
 import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -33,15 +41,17 @@ function BookCard({ bookObj, onUpdate }) {
         {/* DYNAMIC LINK TO VIEW THE BOOK DETAILS  */}
         <Link href={`/book/${bookObj.firebaseKey}`} passHref>
           <Button variant="primary" className="m-2">
-            VIEW
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
           </Button>
         </Link>
         {/* DYNAMIC LINK TO EDIT THE BOOK DETAILS  */}
         <Link href={`/book/edit/${bookObj.firebaseKey}`} passHref>
-          <Button variant="success">EDIT</Button>
+          <Button variant="success">
+            <FontAwesomeIcon icon={faPenToSquare} />
+          </Button>
         </Link>
         <Button variant="danger" onClick={deleteThisBook} className="m-2">
-          DELETE
+          <FontAwesomeIcon icon={faTrashCan} />
         </Button>
       </Card.Body>
     </Card>

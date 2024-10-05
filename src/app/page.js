@@ -30,7 +30,7 @@ function Home() {
     <div className="text-center my-4">
       <Link href="/book/new" passHref>
         <Button variant="dark" className="mb-3">
-          Add A Book
+          Add Book
         </Button>
       </Link>
       <div className="d-flex flex-wrap justify-content-center">
