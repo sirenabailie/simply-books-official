@@ -24,7 +24,12 @@ export default function ViewAuthor({ params }) {
           {authorDetails.first_name} {authorDetails.last_name}
           {authorDetails.favorite ? ' 🤍' : ''}
         </h5>
-        <h6 className="mb-3">Email: {authorDetails.email}</h6>
+        <h6 className="mb-3 email">
+          Author Email:{' '}
+          <a href={`mailto:${authorDetails.email}`} style={{ color: 'indianred' }}>
+            {authorDetails.email}
+          </a>
+        </h6>
         <h6 className="mb-3">Books:</h6>
         {authorDetails.books && authorDetails.books.length > 0 ? (
           <ul>

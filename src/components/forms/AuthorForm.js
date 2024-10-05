@@ -106,7 +106,9 @@ function AuthorForm({ obj = initialState }) {
       />
 
       {/* SUBMIT BUTTON */}
-      <Button type="submit">{obj.firebaseKey ? 'Update' : 'Create'} Author</Button>
+      <Button variant="dark" className="btn" type="submit">
+        {obj.firebaseKey ? 'Update' : 'Create'} Author
+      </Button>
     </Form>
   );
 }
