@@ -1,5 +1,7 @@
 'use client';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTag } from '@fortawesome/free-solid-svg-icons';
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import PropTypes from 'prop-types';
@@ -96,7 +98,11 @@ function BookForm({ obj = initialState }) {
         type="switch"
         id="sale"
         name="sale"
-        label="🏷️ On Sale?"
+        label={
+          <>
+            <FontAwesomeIcon icon={faTag} style={{ color: 'white', marginRight: '5px' }} /> On Sale?
+          </>
+        }
         checked={formInput.sale}
         onChange={(e) => {
           setFormInput((prevState) => ({

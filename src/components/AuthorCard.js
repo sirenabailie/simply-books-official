@@ -24,7 +24,7 @@ function AuthorCard({ authorObj, onUpdate }) {
           {authorObj.favorite && (
             <span>
               &nbsp;
-              <FontAwesomeIcon icon={regularHeart} style={{ color: '#790a0a', fontSize: '24px' }} />
+              <FontAwesomeIcon icon={regularHeart} style={{ color: '#790a0a', fontSize: '20px' }} />
               <br />
             </span>
           )}

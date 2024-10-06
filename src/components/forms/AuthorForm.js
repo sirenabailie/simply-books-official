@@ -1,5 +1,7 @@
 'use client';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import PropTypes from 'prop-types';
@@ -95,7 +97,12 @@ function AuthorForm({ obj = initialState }) {
         type="switch"
         id="favorite"
         name="favorite"
-        label="Favorite? 💖"
+        label={
+          <>
+            Favorite?
+            <FontAwesomeIcon icon={faHeart} style={{ color: 'rgb(121, 10, 10)', marginRight: '5px', fontSize: '18px' }} />
+          </>
+        }
         checked={formInput.favorite || false} // Ensure controlled checkbox with fallback
         onChange={(e) => {
           setFormInput((prevState) => ({
