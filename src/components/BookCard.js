@@ -1,14 +1,9 @@
 'use client';
 
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-duplicates
-import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
-// eslint-disable-next-line import/no-extraneous-dependencies
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-// eslint-disable-next-line import/no-extraneous-dependencies, import/no-duplicates
-import { faTrashCan } from '@fortawesome/free-regular-svg-icons';
+import { faPenToSquare, faTrashCan } from '@fortawesome/free-regular-svg-icons';
+import { faMagnifyingGlass, faTag } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -33,7 +28,8 @@ function BookCard({ bookObj, onUpdate }) {
           ${bookObj.price}
           {bookObj.sale && (
             <span>
-              &nbsp 🏷️
+              &nbsp;
+              <FontAwesomeIcon icon={faTag} style={{ color: '#ffffff', fontSize: '18px' }} />
               <br />
             </span>
           )}{' '}

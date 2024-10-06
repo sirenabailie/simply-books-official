@@ -1,57 +1,57 @@
 body {
- background-image: url(../styles/books.avif);
-  background-size: cover;
-}
-
-.navbar {
-  background: rgba( 0, 0, 0, 0.45 );
-  box-shadow: 0 8px 32px 0 rgba(121, 10, 10, 0.37);
-  backdrop-filter: blur( 6.5px );
-  -webkit-backdrop-filter: blur( 6.5px );
-  border-radius: 10px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
-}
-
-.navbar-brand, .nav-link {
-  color: white !important; 
-  transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-  color: indianred !important; /* Change text color to IndianRed on hover */
-}
-
-.card {
-  background: rgba( 0, 0, 0, 0.45 );
-  box-shadow: 0 8px 32px 0 rgba(121, 10, 10, 0.37);
-  backdrop-filter: blur( 6.5px );
-  -webkit-backdrop-filter: blur( 6.5px );
-  border-radius: 10px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
-  color: white;
-}
-
-.btn {
-  background: rgba( 0, 0, 0, 0.45 );
-box-shadow: 0 8px 32px 0 rgba(121, 10, 10, 0.37);
-backdrop-filter: blur( 6.5px );
--webkit-backdrop-filter: blur( 6.5px );
-border-radius: 10px;
-border: 1px solid rgba( 255, 255, 255, 0.18 );
-}
-
-.btn:hover {
-  background-color: rgba(121, 10, 10, 0.37);
-}
-
-.signInBtn:hover {
-  background-color: rgba(121, 10, 10, 0.37);
-}
-
-.fav {
-  color: white;
-}
-
-.signin {
-  color: white
-}
+  background-image: url(../styles/books.avif);
+   background-size: cover;
+ }
+ 
+ .navbar {
+   background: rgba( 0, 0, 0, 0.45 );
+   box-shadow: 0 8px 32px 0 rgba(121, 10, 10, 0.37);
+   backdrop-filter: blur( 6.5px );
+   -webkit-backdrop-filter: blur( 6.5px );
+   border-radius: 10px;
+   border: 1px solid rgba( 255, 255, 255, 0.18 );
+ }
+ 
+ .navbar-brand, .nav-link {
+   color: white !important; 
+   transition: color 0.3s ease;
+ }
+ 
+ .nav-link:hover {
+   color: indianred !important; /* Change text color to IndianRed on hover */
+ }
+ 
+ .card {
+   background: rgba( 0, 0, 0, 0.45 );
+   box-shadow: 0 8px 32px 0 rgba(121, 10, 10, 0.37);
+   backdrop-filter: blur( 6.5px );
+   -webkit-backdrop-filter: blur( 6.5px );
+   border-radius: 10px;
+   border: 1px solid rgba( 255, 255, 255, 0.18 );
+   color: white;
+ }
+ 
+ .btn {
+   background: rgba( 0, 0, 0, 0.45 );
+ box-shadow: 0 8px 32px 0 rgba(121, 10, 10, 0.37);
+ backdrop-filter: blur( 6.5px );
+ -webkit-backdrop-filter: blur( 6.5px );
+ border-radius: 10px;
+ border: 1px solid rgba( 255, 255, 255, 0.18 );
+ }
+ 
+ .btn:hover {
+   background-color: rgba(121, 10, 10, 0.37);
+ }
+ 
+ .signInBtn:hover {
+   background-color: rgba(121, 10, 10, 0.37);
+ }
+ 
+ .fav {
+   color: white;
+ }
+ 
+ .signin {
+   color: white
+ }
