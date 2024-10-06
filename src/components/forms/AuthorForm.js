@@ -100,7 +100,7 @@ function AuthorForm({ obj = initialState }) {
         label={
           <>
             Favorite?
-            <FontAwesomeIcon icon={faHeart} style={{ color: 'rgb(121, 10, 10)', marginRight: '5px', fontSize: '18px' }} />
+            <FontAwesomeIcon icon={faHeart} style={{ color: '#a50a0a', marginRight: '5px', fontSize: '18px' }} />
           </>
         }
         checked={formInput.favorite || false} // Ensure controlled checkbox with fallback
