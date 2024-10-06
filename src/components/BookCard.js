@@ -28,16 +28,16 @@ function BookCard({ bookObj, onUpdate }) {
     <Card className="card" style={{ width: '18rem', margin: '10px' }}>
       <Card.Img variant="top" src={bookObj.image} alt={bookObj.title} style={{ height: '400px' }} />
       <Card.Body>
-        <Card.Title>
-          {bookObj.title}{' '}
+        <Card.Title>{bookObj.title} </Card.Title>
+        <h6>
+          ${bookObj.price}
           {bookObj.sale && (
             <span>
               🏷️
               <br />
             </span>
           )}{' '}
-        </Card.Title>
-        <h6>${bookObj.price}</h6>
+        </h6>
         {/* DYNAMIC LINK TO VIEW THE BOOK DETAILS  */}
         <Link href={`/book/${bookObj.firebaseKey}`} passHref>
           <Button variant="dark" className="m-2" title="View Details">

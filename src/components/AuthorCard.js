@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPenToSquare, faTrashCan } from '@fortawesome/free-regular-svg-icons';
+import { faPenToSquare, faTrashCan, faHeart as regularHeart } from '@fortawesome/free-regular-svg-icons';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import PropTypes from 'prop-types';
 import Button from 'react-bootstrap/Button';
@@ -18,19 +18,18 @@ function AuthorCard({ authorObj, onUpdate }) {
   return (
     <Card style={{ width: '18rem', margin: '10px' }} className="text-center card">
       {' '}
-      {/* Center all text inside the card */}
       <Card.Body>
         <Card.Title>
           {authorObj.first_name} {authorObj.last_name}
           {authorObj.favorite && (
             <span>
-              ❤️
+              &nbsp;
+              <FontAwesomeIcon icon={regularHeart} style={{ color: '#790a0a', fontSize: '24px' }} />
               <br />
             </span>
           )}
         </Card.Title>
         <p className="card-text bold">@{authorObj.email}</p>
-        {/* Center the buttons */}
         <div className="d-flex justify-content-center">
           {/* DYNAMIC LINK TO VIEW THE AUTHOR DETAILS */}
           <Link href={`/authors/${authorObj.firebaseKey}`} passHref>
