@@ -33,7 +33,7 @@ function BookCard({ bookObj, onUpdate }) {
           ${bookObj.price}
           {bookObj.sale && (
             <span>
-              🏷️
+              &nbsp 🏷️
               <br />
             </span>
           )}{' '}
