@@ -24,7 +24,7 @@ Any user interested in managing and exploring books and authors.
 
 ## Screenshots of the Project
 All Books
-![Screenshot](../styles/Images/books.avif)
+![Screenshot 2024-10-06 200003](https://github.com/user-attachments/assets/12930c47-df3a-4766-aa90-60efd1357e5b)
 All Authors
 ![Screenshot](../styles/Images/authors.png)
 Favorite Authors
