@@ -47,10 +47,6 @@ Create Author
 
 ![Screenshot 2024-10-06 193437](https://github.com/user-attachments/assets/89af6f71-35c3-4914-88df-701cae09b3b6)
 
-View Book
-
-![Screenshot 2024-10-06 193342](https://github.com/user-attachments/assets/ae6eca43-1ce7-4a55-9aa0-7f4d38e0753b)
-
 View Book Details
 
 ![Screenshot 2024-10-06 193342](https://github.com/user-attachments/assets/dab0bf0d-ca92-4d4e-a82d-576a6409092a)
