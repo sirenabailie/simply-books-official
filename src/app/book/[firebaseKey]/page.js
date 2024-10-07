@@ -3,6 +3,9 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart as regularHeart } from '@fortawesome/free-regular-svg-icons';
+import { faTag } from '@fortawesome/free-solid-svg-icons';
 import { viewBookDetails } from '@/api/mergedData';
 import PropTypes from 'prop-types';
 
@@ -24,8 +27,7 @@ export default function ViewBook({ params }) {
       </div>
       <div className="text-white ms-5 details">
         <h5>
-          {bookDetails.title} by {bookDetails.authorObject?.first_name} {bookDetails.authorObject?.last_name}
-          {bookDetails.authorObject?.favorite ? ' 🤍' : ''}
+          {bookDetails.title} by {bookDetails.authorObject?.first_name} {bookDetails.authorObject?.last_name} {bookDetails.authorObject?.favorite && <FontAwesomeIcon icon={regularHeart} style={{ color: '#a50a0a', fontSize: '20px' }} />}
         </h5>
         Author Email:{' '}
         <a href={`mailto:${bookDetails.authorObject?.email}`} style={{ color: 'indianred' }}>
@@ -33,7 +35,16 @@ export default function ViewBook({ params }) {
         </a>
         <p>{bookDetails.description || ''}</p>
         <hr />
-        <p>{bookDetails.sale ? `🏷️ Sale $${bookDetails.price}` : `$${bookDetails.price}`}</p>
+        <p>
+          {bookDetails.sale ? (
+            <>
+              <FontAwesomeIcon icon={faTag} style={{ color: '#ffffff', fontSize: '18px', marginRight: '5px' }} />
+              Sale ${bookDetails.price}
+            </>
+          ) : (
+            `$${bookDetails.price}`
+          )}
+        </p>
       </div>
     </div>
   );
