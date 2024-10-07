@@ -4,6 +4,8 @@
 
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart as regularHeart } from '@fortawesome/free-regular-svg-icons';
 import { viewAuthorDetails } from '../../../api/mergedData';
 
 export default function ViewAuthor({ params }) {
@@ -21,8 +23,7 @@ export default function ViewAuthor({ params }) {
     <div className="mt-5 d-flex flex-wrap justify-content-center">
       <div className="text-white ms-5 details">
         <h5 className="mb-3">
-          {authorDetails.first_name} {authorDetails.last_name}
-          {authorDetails.favorite ? ' 🤍' : ''}
+          {authorDetails.first_name} {authorDetails.last_name} {authorDetails.favorite && <FontAwesomeIcon icon={regularHeart} style={{ color: '#a50a0a', fontSize: '20px' }} />}
         </h5>
         <h6 className="mb-3 email">
           Author Email:{' '}
