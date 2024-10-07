@@ -23,7 +23,7 @@ Any user interested in managing and exploring books and authors.
 * Integrates with Firebase for authentication and data management.
 
 ## Link to Loom video walkthrough of the app
-[Simply Books Loom]([https://www.loom.com/share/example-video](https://www.loom.com/share/0b321797f8514213afc77060675c4091)) 
+[Simply Books Loom](https://www.loom.com/share/0b321797f8514213afc77060675c4091)
 
 ## Screenshots of the Project
 Sign In
