@@ -93,6 +93,27 @@ const booksOnSale = () =>
       .catch(reject);
   });
 
+const booksVisibility = (isPublic, uid) =>
+  new Promise((resolve, reject) => {
+    const queryParam = isPublic ? 'true' : `"${uid}"`;
+
+    fetch(`${endpoint}/books.json?orderBy="visibility"&equalTo=${queryParam}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data) {
+          resolve(Object.values(data));
+        } else {
+          resolve([]);
+        }
+      })
+      .catch(reject);
+  });
+
 const searchBooks = () =>
   new Promise((resolve, reject) => {
     fetch(`${endpoint}/books.json?orderBy="title"`, {
@@ -113,4 +134,4 @@ const searchBooks = () =>
       .catch(reject);
   });
 
-export { getBooks, createBook, booksOnSale, deleteBook, getSingleBook, updateBook, searchBooks };
+export { getBooks, createBook, booksOnSale, booksVisibility, deleteBook, getSingleBook, updateBook, searchBooks };

@@ -2,6 +2,7 @@
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTag } from '@fortawesome/free-solid-svg-icons';
+import { faEye } from '@fortawesome/free-regular-svg-icons';
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import PropTypes from 'prop-types';
@@ -19,6 +20,7 @@ const initialState = {
   sale: false,
   title: '',
   author_id: '',
+  visibility: true,
 };
 
 function BookForm({ obj = initialState }) {
@@ -92,7 +94,7 @@ function BookForm({ obj = initialState }) {
         <Form.Control as="textarea" placeholder="Description" style={{ height: '100px' }} name="description" value={formInput.description} onChange={handleChange} required />
       </FloatingLabel>
 
-      {/* A WAY TO HANDLE UPDATES FOR TOGGLES, RADIOS, ETC  */}
+      {/* SALE TOGGLE  */}
       <Form.Check
         className="text-white mb-3"
         type="switch"
@@ -108,6 +110,25 @@ function BookForm({ obj = initialState }) {
           setFormInput((prevState) => ({
             ...prevState,
             sale: e.target.checked,
+          }));
+        }}
+      />
+
+      <Form.Check
+        className="text-white mb-3"
+        type="switch"
+        id="visibility"
+        name="visibility"
+        label={
+          <>
+            <FontAwesomeIcon icon={faEye} /> Public?
+          </>
+        }
+        checked={formInput.visibility}
+        onChange={(e) => {
+          setFormInput((prevState) => ({
+            ...prevState,
+            visibility: e.target.checked,
           }));
         }}
       />
