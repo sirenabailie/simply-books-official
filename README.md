@@ -21,6 +21,7 @@ Any user interested in managing and exploring books and authors.
 * Users can mark authors as favorites and view their favorite authors separately.
 * Users can mark and view books on sale.
 * Integrates with Firebase for authentication and data management.
+* Public/Private toggle for books
 
 ## Link to Loom video walkthrough of the app
 [Simply Books Loom](https://www.loom.com/share/0b321797f8514213afc77060675c4091)
