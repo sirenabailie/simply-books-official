@@ -67,6 +67,9 @@ Update Author
 
 ![Screenshot 2024-10-06 194848](https://github.com/user-attachments/assets/b0dbf179-20a8-430e-b5aa-f9059fd4b047)
 
+Public/Private Toggle on BookForm 
+![Screenshot 2024-10-08 180006](https://github.com/user-attachments/assets/1cf68cd8-1867-45ce-924e-ee1ab314880f)
+
 
 ## List of Contributors and Links to their GH Profiles
 [Sirena Foster](https://github.com/sirenabailie)
